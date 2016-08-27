@@ -4,16 +4,17 @@
 <div class="large-12 columns">
     <table class="large-12">
         <thead>
-            <tr>Name</tr>
-            <tr>Root URL</tr>
-            <tr>Feeds URL</tr>
+            <tr>Title</tr>
+            <tr>Description</tr>
+            <tr>Topic URL</tr>
+            <tr>Date</tr>
         </thead>
-
         <tbody>
-            {% for blog in blogs %}
-                <td>{{ blog.name }}</td>
-                <td>{{ blog.root_url }}</td>
-                <td>{{ blog.feeds_url }}</td>
+            {% for topic in topics %}
+                <td>{{ topic.title }}</td>
+                <td>{{ topic.description }}</td>
+                <td>{{ topic.topic_url }}</td>
+                <td>{{ topic.date }}</td>
             {% endfor %}
         </tbody>
     </table>

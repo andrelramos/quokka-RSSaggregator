@@ -1,9 +1,9 @@
 # coding: utf-8
-from .models import ExternalBlogs
+from .models import AggregatedTopic
 
 
-def get_external_blog(**kwargs):
-    blogs = ExternalBlogs.objects(**kwargs)
+def get_external_topic(**kwargs):
+    topics = AggregatedTopic.objects(**kwargs)
 
-    return blogs.order_by('name')
+    return topics.order_by('date')
 
