@@ -1,0 +1,21 @@
+{% extends theme('RSSaggregator/rssaggregator_base.html') %}
+
+{% block content %}
+<div class="large-12 columns">
+    <table class="large-12">
+        <thead>
+            <tr>Name</tr>
+            <tr>Root URL</tr>
+            <tr>Feeds URL</tr>
+        </thead>
+
+        <tbody>
+            {% for blog in blogs %}
+                <td>{{ blog.name }}</td>
+                <td>{{ blog.root_url }}</td>
+                <td>{{ blog.feeds_url }}</td>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
