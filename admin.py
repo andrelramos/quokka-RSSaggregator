@@ -14,12 +14,12 @@ class ExternalBlogsAdmin(ModelAdmin):
 
 
 class AggregatedTopicAdmin(ModelAdmin):
-
     roles_accepted = ('admin', 'editor')
     column_filters = ('title', 'date', 'blog')
     column_searchable_list = ('title', 'topic_url')
     column_list = ('title', 'date', 'blog', 'topic_url', 'description')
     form_columns = ('title', 'date', 'blog', 'topic_url', 'description')
 
+# Register RSSaggregator models to quokka admin page
 admin.register(ExternalBlogs, ExternalBlogsAdmin, category=_("RSSaggregator"), name=_l("External Blogs"))
 admin.register(AggregatedTopic, AggregatedTopicAdmin, category=_("RSSaggregator"), name=_l("Aggregated Topics"))
